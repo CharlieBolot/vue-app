@@ -4,6 +4,7 @@
         <p>
            C'est MA Page !
         </p>
+         <button type="button" v-on:click="home()">Déconnexion</button>
     </div>
 </template>
 
@@ -13,6 +14,12 @@ export default {
   data() {
     return {};
   },
+  methods: {
+    home() {
+      this.$emit("authenticated", false);
+      this.$router.replace({ name: "Home" });
+    }
+  }
 };
 </script>
 

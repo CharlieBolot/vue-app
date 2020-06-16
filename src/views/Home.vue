@@ -31,10 +31,12 @@ export default {
           this.$emit('authenticated', true);
           this.$router.replace({ name: 'page' });
         } else {
-          console.log('The username and / or password is incorrect');
+          // console.log('The username and / or password is incorrect');
+          alert ("L'identifiant et/ou le mdp est incorrect");
         }
       } else {
-        console.log('A username and password must be present');
+        // console.log('A username and password must be present');
+        alert ("Veuillez entrer un mdp et un identifiant");
       }
     },
     goBack() {

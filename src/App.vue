@@ -16,8 +16,8 @@ export default {
     return {
       authenticated: false,
       mockAccount: {
-        username: 'charlie',
-        password: 'moi',
+        username: 'admin',
+        password: 'admin',
       },
     };
   },
