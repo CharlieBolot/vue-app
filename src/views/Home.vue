@@ -1,18 +1,45 @@
 <template>
   <div class="home">
     <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Charlie's Vue.js App"/>
+    <h1> Bienvenu dans mon application</h1>
+    <form id="pass">
+      <h2>Connexion :</h2>
+      Login : <input type="text" name="page" placeholder="login" v-model="input.username">
+      Mot de passe : <input type="password" name="password"
+      placeholder="Password" v-model="input.password">
+      <button type="submit" v-on:click="login()">Valider</button>
+    </form>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue';
-
 export default {
-  name: 'Home',
-  components: {
-    HelloWorld,
+  name: 'home',
+  data() {
+    return {
+      input: {
+        username: '',
+        password: '',
+      },
+    };
+  },
+  methods: {
+    login() {
+      if (this.input.username !== '' && this.input.password !== '') {
+        if (this.input.username === this.$parent.mockAccount.username
+        && this.input.password === this.$parent.mockAccount.password) {
+          this.$emit('authenticated', true);
+          this.$router.replace({ name: 'page' });
+        } else {
+          console.log('The username and / or password is incorrect');
+        }
+      } else {
+        console.log('A username and password must be present');
+      }
+    },
+    goBack() {
+      return window.history.length > 1 ? this.$router.go(-1) : this.$router.push('/');
+    },
   },
 };
 </script>
