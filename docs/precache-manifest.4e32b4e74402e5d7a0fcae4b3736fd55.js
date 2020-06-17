@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/vue-app/img/logo.82b9c7a5.png"
   },
   {
-    "revision": "a5c6f3d6f1bda200a9262ace8d833ccc",
+    "revision": "dce46f1a2c165ecf6ac8709136664c01",
     "url": "/vue-app/index.html"
   },
   {
@@ -24,7 +24,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/vue-app/js/chunk-vendors.3a5b8889.js"
   },
   {
-    "revision": "52c0507b1cc17a713ed5dfe1371b0395",
+    "revision": "0c648dbc0e94e68ab8d6c4ff1562dcb1",
     "url": "/vue-app/manifest.json"
   },
   {

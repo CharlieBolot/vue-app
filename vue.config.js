@@ -9,7 +9,7 @@ module.exports = {
 
   pwa: {
     name: 'My App',
-    themeColor: '#4DBA87',
+    themeColor: '#66bd63',
     msTileColor: '#000000',
   }
   
