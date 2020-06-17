@@ -6,4 +6,11 @@ module.exports = {
     : '/',
 
   lintOnSave: false,
-};
+
+  pwa: {
+    name: 'My App',
+    themeColor: '#4DBA87',
+    msTileColor: '#000000',
+  }
+  
+}
