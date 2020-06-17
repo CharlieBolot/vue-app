@@ -5,5 +5,5 @@ module.exports = {
     ? '/vue-app/'
     : '/',
 
-  lintOnSave: false
-}
+  lintOnSave: false,
+};

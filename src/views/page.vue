@@ -16,9 +16,10 @@
 <script>
 import test from '@/components/test.vue';
 import couleur from '@/components/couleur.vue';
+
 export default {
   name: 'page',
-   components: {
+  components: {
     test,
     couleur,
   },
@@ -28,10 +29,10 @@ export default {
 
   methods: {
     home() {
-      this.$emit("authenticated", false);
-      this.$router.replace({ name: "Home" });
-    }
-  }
+      this.$emit('authenticated', false);
+      this.$router.replace({ name: 'Home' });
+    },
+  },
 };
 </script>
 

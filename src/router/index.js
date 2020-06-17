@@ -30,16 +30,15 @@ const routes = [
     name: 'page',
     component: SecureComponent,
     beforeEnter: (to, from, next) => {
-      console.log( router.app.$root.authenticated )
-      if ( router.app.$root.authenticated ){
-        console.log('test')
+      console.log(router.app.$root.authenticated);
+      if (router.app.$root.authenticated) {
+        console.log('test');
         // router.app.$emit('authenticated', true);
-        next()
+        next();
+      } else {
+        next('/home');
       }
-      else{
-        next('/home')
-      }
-    }
+    },
   },
 ];
 

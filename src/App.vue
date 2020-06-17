@@ -14,7 +14,7 @@ export default {
   name: 'App',
   data() {
     return {
-      //authenticated: false,
+      // authenticated: false,
       mockAccount: {
         username: 'admin',
         password: 'admin',

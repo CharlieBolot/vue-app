@@ -16,7 +16,7 @@ module.exports = {
 
   rules: {
     'no-console': 'off',
-    'no-debugger': 'off'
+    'no-debugger': 'off',
   },
 
   extends: [
@@ -24,8 +24,8 @@ module.exports = {
     '@vue/airbnb',
   ],
 
-  'extends': [
+  extends: [
     'plugin:vue/essential',
-    '@vue/airbnb'
-  ]
+    '@vue/airbnb',
+  ],
 };

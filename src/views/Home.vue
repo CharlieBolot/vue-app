@@ -14,7 +14,7 @@
     <couleur couleur=#ABfDDD btn='clique sur moi !' @newcouleur="$event"/>
     <couleur couleur=#ABCDED btn='non ici !' @newcouleur="$event"/>
     <couleur couleur=#AABCCA btn='mais non là !' @newcouleur="$event"/>
-    
+
   </div>
 </template>
 
@@ -44,15 +44,15 @@ export default {
         && this.input.password === this.$parent.mockAccount.password) {
           this.$emit('authenticated', true);
           // will run after $emit is done
-          this.$router.replace({ name: 'page' });        
-          //this.$root.authenticated = true;
+          this.$router.replace({ name: 'page' });
+          // this.$root.authenticated = true;
         } else {
           // console.log('The username and / or password is incorrect');
-          alert ("L'identifiant et/ou le mdp est incorrect");
+          alert("L'identifiant et/ou le mdp est incorrect");
         }
       } else {
         // console.log('A username and password must be present');
-        alert ("Veuillez entrer un mdp et un identifiant");
+        alert('Veuillez entrer un mdp et un identifiant');
       }
     },
     goBack() {

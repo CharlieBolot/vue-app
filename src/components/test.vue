@@ -2,7 +2,7 @@
   <div class="test">
     <h1>Test de boutton </h1>
       <button v-on:click="count++">Vous m'avez cliqué {{ count }} fois.</button>
-  </div>   
+  </div>
 </template>
 
 <script>
