@@ -4,10 +4,10 @@
     <h1> Bienvenu dans mon application</h1>
     <form id="pass">
       <h2>Connexion :</h2>
-      Login : <input type="text" name="page" placeholder="login" v-model="input.username">
-      Mot de passe : <input type="password" name="password"
-      placeholder="Password" v-model="input.password">
-      <button type="submit" v-on:click="login()">Valider</button>
+      Login : <input type="text" name="page" placeholder="login" v-model="input.username"><br>
+      Mot de passe : <input  style="margin-top: 15px"  type="password" name="password"
+      placeholder="Password" v-model="input.password"><br>
+      <button style="margin-top: 15px" type="submit" v-on:click="login()">Valider</button>
     </form>
     <test count=0 />
     <h3>Et voici les boutons de couleur :</h3>
