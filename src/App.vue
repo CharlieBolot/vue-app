@@ -3,10 +3,10 @@
     <div id="nav">
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link> |
-      <router-link v-if="authenticated" to="/page"
+      <router-link v-if="$root.authenticated" to="/page"
       v-on:click.native="logout()" replace>Logout</router-link>
     </div>
-    <router-view/>
+    <router-view @authenticated="setAuthenticated" />
   </div>
 </template>
 <script>
@@ -14,7 +14,7 @@ export default {
   name: 'App',
   data() {
     return {
-      authenticated: false,
+      //authenticated: false,
       mockAccount: {
         username: 'admin',
         password: 'admin',
@@ -28,10 +28,10 @@ export default {
   },
   methods: {
     setAuthenticated(status) {
-      this.authenticated = status;
+      this.$root.authenticated = status;
     },
     logout() {
-      this.authenticated = false;
+      this.$root.authenticated = false;
     },
   },
 };

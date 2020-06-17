@@ -6,5 +6,9 @@ Vue.config.productionTip = false;
 
 new Vue({
   router,
+  data:{
+    test: 'charlie',
+    authenticated: false,
+  },
   render: (h) => h(App),
 }).$mount('#app');

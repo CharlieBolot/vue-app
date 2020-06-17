@@ -14,6 +14,11 @@ export default {
   data() {
     return {};
   },
+  // mounted(){
+  //   if(!this.$root.authenticated) {
+  //     this.$router.replace({ name: "Home" });
+  //   }
+  // },
   methods: {
     home() {
       this.$emit("authenticated", false);

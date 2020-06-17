@@ -29,7 +29,9 @@ export default {
         if (this.input.username === this.$parent.mockAccount.username
         && this.input.password === this.$parent.mockAccount.password) {
           this.$emit('authenticated', true);
-          this.$router.replace({ name: 'page' });
+          // will run after $emit is done
+          this.$router.replace({ name: 'page' });        
+          //this.$root.authenticated = true;
         } else {
           // console.log('The username and / or password is incorrect');
           alert ("L'identifiant et/ou le mdp est incorrect");

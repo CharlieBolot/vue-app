@@ -29,6 +29,17 @@ const routes = [
     path: '/page',
     name: 'page',
     component: SecureComponent,
+    beforeEnter: (to, from, next) => {
+      console.log( router.app.$root.authenticated )
+      if ( router.app.$root.authenticated ){
+        console.log('test')
+        // router.app.$emit('authenticated', true);
+        next()
+      }
+      else{
+        next('/home')
+      }
+    }
   },
 ];
 
