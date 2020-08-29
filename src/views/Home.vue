@@ -9,26 +9,24 @@
       placeholder="Password" v-model="input.password"><br>
       <button style="margin-top: 15px" type="submit" v-on:click="login()">Valider</button>
     </form>
-    <test count=0 />
-    <h3>Et voici les boutons de couleur :</h3>
-    <couleur couleur=#ABfDDD btn='clique sur moi !' @newcouleur="$event"/>
-    <couleur couleur=#ABCDED btn='non ici !' @newcouleur="$event"/>
-    <couleur couleur=#AABCCA btn='mais non là !' @newcouleur="$event"/>
-
+    
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import test from '@/components/test.vue';
-import couleur from '@/components/couleur.vue';
+// import test from '@/components/test.vue';
+// import couleur from '@/components/couleur.vue';
+// // import Rating from '@/components/Rating.vue';
+// import Rating from 'vue-star-rating';
 
 export default {
   name: 'home',
-  components: {
-    test,
-    couleur,
-  },
+  // components: {
+  //   test,
+  //   couleur,
+  //   Rating,
+  // },
   data() {
     return {
       input: {
@@ -37,6 +35,7 @@ export default {
       },
     };
   },
+  
   methods: {
     login() {
       if (this.input.username !== '' && this.input.password !== '') {
@@ -61,3 +60,7 @@ export default {
   },
 };
 </script>
+
+<style>
+  @import '/styles/global.css';
+</style>
