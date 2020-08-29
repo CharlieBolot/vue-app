@@ -21,9 +21,6 @@ export default {
       },
     };
   },
-  beforeCreate: function() {
-    document.body.className = 'home';
-  },
   mounted() {
     if (!this.authenticated) {
       this.$router.replace({ name: 'Home' });
@@ -41,7 +38,6 @@ export default {
 </script>
 
 <style>
-  @import '/styles/global.css';
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
